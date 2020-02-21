@@ -1,0 +1,12 @@
+---
+- name: Test Playbook
+  hosts: all or domain or www.google.com ## host is must
+  become: true
+  become_method: sudo
+  connection: ssh ## parametr connection is optional by default is ssh
+  ignore_errors: false ## means if i have error stop, if i have playbook just move on. 
+  ## idenpotent means you can run over and over skip them will apply and move ahead
+  tasks: ##below given
+    - name: Task Name Here
+      ping: ##add hoc mean on remote system
+  
